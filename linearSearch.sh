@@ -1,0 +1,26 @@
+echo -n "Enter number of elements: "
+read n
+
+echo "Enter elements:"
+for ((i=0; i<n; i++))
+do
+    read arr[i]
+done
+
+echo -n "Enter element to search: "
+read key
+
+found=0
+
+for ((i=0; i<n; i++))
+do
+    if [ ${arr[i]} -eq $key ]; then
+        echo "Element found at position $((i+1))"
+        found=1
+        break
+    fi
+done
+
+if [ $found -eq 0 ]; then
+    echo "Element not found"
+fi
