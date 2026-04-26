@@ -1,0 +1,6 @@
+echo -n "Enter temperature in Celsius: "
+read c
+
+f=$(( (c * 9 / 5) + 32 ))
+
+echo "Temperature in Fahrenheit = $f"
